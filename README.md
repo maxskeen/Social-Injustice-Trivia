@@ -1,6 +1,6 @@
 # Social-Injustice-Trivia
 
-IMPORTANT \n
+IMPORTANT /n
 In order for the program to run you must download all contents (HomePage.py,Screen.py,Tkinter.py) 
 
 # Tkinter.py
