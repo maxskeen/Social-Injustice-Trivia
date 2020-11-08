@@ -20,7 +20,6 @@ class HomePage:
         #Declare Name input Box
         self.nameInput = Entry(self.root)
         self.nameInput.place(x = 650, y = 450)
-        self.name = self.nameInput.get()
 
         #Declare PLay button
         self.playButton = Button(self.root, text = "PLAY", command = self.startGame)
@@ -47,7 +46,7 @@ class HomePage:
         self.leaderboard = scrolledtext.ScrolledText(self.root, wrap = WORD,  width = 50,  height = 10) 
        #  self.leaderboard.insert(INSERT, "This is a leaderboard")
 
-        f = open('/Users/maxskeen/Desktop/HackPSU Project/Scores.txt', "r")
+        f = open('Scores.txt', "r")
         
         names = []
         points = []
@@ -67,10 +66,6 @@ class HomePage:
 
             names.append(name)
             points.append(int(point))
-
-
-        print(names)
-        print(points)
 
 
         # names = ["Max", "Kolby", "Mikael", "Max"]
@@ -95,7 +90,6 @@ class HomePage:
         self.root.mainloop()
 
     def clicked(self):
-        print("I click")
         self.nextButton.place(x = 750, y = 650)
         self.nextButton.pack()
 
@@ -106,4 +100,5 @@ class HomePage:
 
         else:
             playGame = True
+            self.name = self.nameInput.get()
             self.root.destroy()
